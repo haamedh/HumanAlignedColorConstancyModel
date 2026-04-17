@@ -65,11 +65,11 @@ The result is a model that not only matches human performance levels under norma
 ├── model.py            # UNetWithResnet50Encoder architecture
 ├── datasetImage.py     # ColorConstancyDataset (loads indoor + outdoor LAB data)
 ├── transforms.py       # Data augmentation transforms
-├── loss.py             # PBCLoss (CIEDE2000 + chroma-weighted + L* terms)
+├── loss.py             # PBCLoss
 ├── util.py             # Logger: training log, checkpoint saving, image visualization
 ├── pretrained_weight/
 │   └── model_weights.pth   # Pre-trained weights (download from Releases)
-└── dataset/
+└── dataset/           # ِDataset (download from Releases)
     ├── indoor448/
     │   └── Control1/
     │       ├── img/    # Input images (sRGB)
@@ -109,8 +109,11 @@ Tested with Python 3.10 and PyTorch 2.x.
 ---
 
 ## Usage
-
-**1. Download weights and dataset** from the [Releases](../../releases) page and place them as shown in the directory structure above.
+ 
+**1. Download weights and dataset** and place them as shown in the directory structure above.
+ 
+- [Download dataset.zip](https://github.com/haamedh/HumanAlignedColorConstancyModel/releases/download/v1.0.0/dataset.zip)
+- [Download pretrained_weight.zip](https://github.com/haamedh/HumanAlignedColorConstancyModel/releases/download/v1.0.0/pretrained_weight.zip)
 
 **2. Run fine-tuning:**
 
